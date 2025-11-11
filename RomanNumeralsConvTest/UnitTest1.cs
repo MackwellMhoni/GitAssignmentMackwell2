@@ -42,5 +42,28 @@ namespace RomanNumeralsConvTest
 			}
 		}
 
+		[Fact]
+		public void Test_out_of_range_above_3000()
+		{
+
+			var convert = new RomanNums();
+			int input = 3120;
+			string RangeDetail = " ";
+
+			if (input <= 0)
+			{
+				RangeDetail = "Out of Range";
+			}
+			else
+			{
+				RangeDetail = "In Range";
+			}
+
+			Assert.Equal("Out of Range", RangeDetail);
+		}
+
+
+
+
 	}
 }
