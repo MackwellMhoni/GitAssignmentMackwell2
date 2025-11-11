@@ -31,18 +31,9 @@ namespace RomanNumeralsConvTest
 		{
 			var convert = new RomanNums();
 			int input = -4;
-			string RangeDetail = " ";
 
-			if (input <= 0 || input > 3000)
-			{
-				RangeDetail = "Out of Range";
-			}
-			else
-			{
-				RangeDetail = "In Range";
-			}
+			Assert.Equal("Out of Range", convert.CheckRange(input));
 
-			Assert.Equal("Out of Range", RangeDetail);
 		}
 
 		[Fact]
@@ -51,24 +42,9 @@ namespace RomanNumeralsConvTest
 
 			var convert = new RomanNums();
 			int input = 3120;
-			Range(input);
 
+			Assert.Equal("Out of Range", convert.CheckRange(input));
 		}
 
-		private static void Range(int input)
-		{
-			string RangeDetail = " ";
-
-			if (input <= 0 || input > 3000)
-			{
-				RangeDetail = "Out of Range";
-			}
-			else
-			{
-				RangeDetail = "In Range";
-			}
-
-			Assert.Equal("Out of Range", RangeDetail);
-		}
 	}
 }

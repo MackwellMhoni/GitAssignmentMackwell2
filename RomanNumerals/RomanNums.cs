@@ -13,7 +13,17 @@ public class RomanNums
 
 	public string CheckRange(int input)
 	{
-		return "Out of Range";
+		string RangeDetail = " ";
+
+		if (input <= 0 || input > 3000)
+		{
+			RangeDetail = "Out of Range";
+		}
+		else
+		{
+			RangeDetail = "In Range";
+		}
+		return RangeDetail;
 	}
 
 	public string Convert(int input)
