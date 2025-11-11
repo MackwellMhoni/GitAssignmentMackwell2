@@ -8,7 +8,7 @@ public class RomanNums
 {
     public static void Main()
     {
-	
+		
 	}
 
 	public string CheckRange(int input)
@@ -28,6 +28,7 @@ public class RomanNums
 
 	public string Convert(int input)
 	{
+		CheckRange(input);
 		var convers = new StringBuilder();
 		var romanNumerals = new[]
 		{
@@ -42,7 +43,6 @@ public class RomanNums
 				new { Value = 10,   Symbol = "X" },
 				new { Value = 9,    Symbol = "IX" },
 				new { Value = 5,    Symbol = "V" },
-				new { Value = 4,    Symbol = "IV" },
 				new { Value = 1,    Symbol = "I" }
 		};
 		string conv = "";
