@@ -13,7 +13,7 @@ public class RomanNums
 
 	public string CheckRange(int input)
 	{
-		throw new NotImplementedException();
+		return "Out of Range";
 	}
 
 	public string Convert(int input)

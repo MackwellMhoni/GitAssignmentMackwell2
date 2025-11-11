@@ -32,8 +32,14 @@ namespace RomanNumeralsConvTest
 			var convert = new RomanNums();
 			int input = -4;
 
-
-			Assert.Equal("Out of Range", convert.CheckRange(input));
+			if(input <= 0)
+			{
+				Assert.Equal("Out of Range", convert.CheckRange(input));
+			}
+			else
+			{
+				Assert.Equal("", convert.CheckRange(input));
+			}
 		}
 
 	}
