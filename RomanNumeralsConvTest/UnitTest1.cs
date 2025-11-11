@@ -12,17 +12,17 @@ namespace RomanNumeralsConvTest
 		}
 
 		[Fact]
-		public void Test_convert_2_and_3()
+		public void Test_convert_1_to_3()
 		{
 			var convert = new RomanNums();
-			int input = 2;
+			int input = 3;
 			if (input <= 0 || input > 4)
 			{
 				throw new Exception("Needs to be between 1 and 3");
 			}
 			else
 			{
-				Assert.Equal("II", convert.Convert(input));
+				Assert.Equal("III", convert.Convert(input));
 			}
 
 		}

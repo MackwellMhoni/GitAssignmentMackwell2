@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.VisualBasic;
+using System.Resources;
 using System.Text;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -7,13 +8,14 @@ public class RomanNums
 {
     public static void Main()
     {
-		
+	
 	}
 
 	public string Convert(int input)
 	{
+		var convers = new StringBuilder();
 		var romanNumerals = new[]
-{
+		{
 				new { Value = 1000, Symbol = "M" },
 				new { Value = 900,  Symbol = "CM" },
 				new { Value = 500,  Symbol = "D" },
@@ -29,15 +31,18 @@ public class RomanNums
 				new { Value = 1,    Symbol = "I" }
 		};
 		string conv = "";
+		
 
 		foreach (var pair in romanNumerals)
 		{
-			if (pair.Value == input)
+			while (input >= pair.Value)
 			{
 				conv = pair.Symbol;
+				convers.Append(conv);
+				input -= pair.Value;
 			}
 		}
-		return conv;
+		return convers.ToString();
 
 
 
