@@ -50,7 +50,7 @@ namespace RomanNumeralsConvTest
 			int input = 3120;
 			string RangeDetail = " ";
 
-			if (input <= 0)
+			if (input <= 0 || input > 3000)
 			{
 				RangeDetail = "Out of Range";
 			}
@@ -61,6 +61,8 @@ namespace RomanNumeralsConvTest
 
 			Assert.Equal("Out of Range", RangeDetail);
 		}
+
+
 
 
 
