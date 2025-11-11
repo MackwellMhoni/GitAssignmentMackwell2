@@ -6,9 +6,9 @@ public class RomanNums
         Console.WriteLine("Hello, World!");
     }
 
-	public void Convert(int input)
+	public string Convert(int input)
 	{
-		throw new NotImplementedException();
+		return "I";
 	}
 }
    

@@ -8,9 +8,7 @@ namespace RomanNumeralsConvTest
 			var convert = new RomanNums();
 			int input = 1;
 
-			convert.Convert(input);
-
-			Assert.Equal(1, input);
+			Assert.Equal("I", convert.Convert(input));
 		}
 	}
 }
