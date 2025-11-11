@@ -11,6 +11,11 @@ public class RomanNums
 	
 	}
 
+	public string CheckRange(int input)
+	{
+		throw new NotImplementedException();
+	}
+
 	public string Convert(int input)
 	{
 		var convers = new StringBuilder();
@@ -37,15 +42,11 @@ public class RomanNums
 		{
 			while (input >= pair.Value)
 			{
-				conv = pair.Symbol;
-				convers.Append(conv);
+				convers.Append(pair.Symbol);
 				input -= pair.Value;
 			}
 		}
 		return convers.ToString();
-
-
-
 	}
 }
    

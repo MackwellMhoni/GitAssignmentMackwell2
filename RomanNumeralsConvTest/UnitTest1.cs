@@ -24,7 +24,17 @@ namespace RomanNumeralsConvTest
 			{
 				Assert.Equal("III", convert.Convert(input));
 			}
-
 		}
+
+		[Fact]
+		public void Test_out_of_range_negative()
+		{
+			var convert = new RomanNums();
+			int input = -4;
+
+
+			Assert.Equal("Out of Range", convert.CheckRange(input));
+		}
+
 	}
 }
