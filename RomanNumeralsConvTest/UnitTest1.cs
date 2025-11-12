@@ -7,7 +7,7 @@ namespace RomanNumeralsConvTest
 {
 	public class UnitTest1
 	{
-		private static void subtractivePair(int input)
+		private string subtractivePair(int input)
 		{
 			var convert = new RomanNums();
 			int rem = 0;
@@ -19,31 +19,34 @@ namespace RomanNumeralsConvTest
 				rem = 10 - input;
 				sub.Append(convert.Convert(rem));
 				sub.Append(convert.Convert(10));
-				Assert.Equal("IX", sub.ToString());
+				return sub.ToString();
+				
 			}
 			else if(input < 100)
 			{
 				rem = 100 - input;
 				sub.Append(convert.Convert(rem));
 				sub.Append(convert.Convert(100));
-				Assert.Equal("XC", sub.ToString());
+				return sub.ToString();
+				
 			}
 			else if (input < 500)
 			{
 				rem = 500 - input;
 				sub.Append(convert.Convert(rem));
 				sub.Append(convert.Convert(500));
-				Assert.Equal("CD", sub.ToString());
+				return sub.ToString();
 			}
 			else if (input < 1000)
 			{
 				rem = 1000 - input;
 				sub.Append(convert.Convert(rem));
 				sub.Append(convert.Convert(1000));
-				Assert.Equal("CM", sub.ToString());
+				return sub.ToString();
+
 			}
 			else{
-				Assert.Equal("Try Again", "Try again");
+				return "Try Again";
 			}
 
 		}
@@ -111,7 +114,9 @@ namespace RomanNumeralsConvTest
 		public void test_9()
 		{
 			int input = 9;
-			subtractivePair(input);
+			string subCon = subtractivePair(input);
+
+			Assert.Equal("IX",subCon);
 		}
 
 	
@@ -146,8 +151,9 @@ namespace RomanNumeralsConvTest
 			var convert = new RomanNums();
 			int input = 90;
 
-			subtractivePair(input);
-			
+			string subCon = subtractivePair(input);
+			Assert.Equal("XC",subCon);
+
 		}
 
 		[Fact]
@@ -156,7 +162,8 @@ namespace RomanNumeralsConvTest
 			var convert = new RomanNums();
 			int input = 400;
 
-			subtractivePair(input);
+			string subCon = subtractivePair(input);
+			Assert.Equal("CD", subCon);
 
 		}
 
@@ -167,7 +174,8 @@ namespace RomanNumeralsConvTest
 			var convert = new RomanNums();
 			int input = 900;
 
-			subtractivePair(input);
+			string subCon = subtractivePair(input);
+			Assert.Equal("CM", subCon);
 
 		}
 
@@ -177,10 +185,22 @@ namespace RomanNumeralsConvTest
 			var convert = new RomanNums();
 			int input = 1900;
 
-			subtractivePair(input);
+			if (input > 1000 || input < 2000)
+			{
+
+				string subCon = subtractivePair(input - 1000);
+				var str = new StringBuilder();
+				str.Append("M");
+				str.Append(subCon);
+				subCon = str.ToString();
 
 
+
+				Assert.Equal("MCM", subCon);
+
+			}
 		}
+
 
 
 
