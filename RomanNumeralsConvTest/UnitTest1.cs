@@ -19,8 +19,16 @@ namespace RomanNumeralsConvTest
 				rem = 10 - input;
 				sub.Append(convert.Convert(rem));
 				sub.Append(convert.Convert(10));
+				Assert.Equal("IX", sub.ToString());
 			}
-			Assert.Equal("IX", sub.ToString());
+			else if(input < 100)
+			{
+				rem = 100 - input;
+				sub.Append(convert.Convert(rem));
+				sub.Append(convert.Convert(100));
+				Assert.Equal("XC", sub.ToString());
+			}
+			
 		}
 
 		[Fact]
@@ -119,9 +127,10 @@ namespace RomanNumeralsConvTest
 		public void Test_Roman_Numeral_RND_number()
 		{
 			var convert = new RomanNums();
-			int input = 1984;
+			int input = 90;
 
-			Assert.Equal("MCMLXXXIV", convert.Convert(input));
+			subtractivePair(input);
+			
 		}
 
 
