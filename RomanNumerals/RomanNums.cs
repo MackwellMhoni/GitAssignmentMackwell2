@@ -6,9 +6,10 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 public class RomanNums
 {
-    public static void Main()
-    {
-		
+
+	public static void Main()
+	{
+	
 	}
 
 	public string CheckRange(int input)
@@ -28,36 +29,38 @@ public class RomanNums
 
 	public string Convert(int input)
 	{
-		CheckRange(input);
-		var convers = new StringBuilder();
-		var romanNumerals = new[]
-		{
-				new { Value = 1000, Symbol = "M" },
-				new { Value = 900,  Symbol = "CM" },
-				new { Value = 500,  Symbol = "D" },
-				new { Value = 400,  Symbol = "CD" },
-				new { Value = 100,  Symbol = "C" },
-				new { Value = 90,   Symbol = "XC" },
-				new { Value = 50,   Symbol = "L" },
-				new { Value = 40,   Symbol = "XL" },
-				new { Value = 10,   Symbol = "X" },
-				new { Value = 9,    Symbol = "IX" },
-				new { Value = 5,    Symbol = "V" },
-				new { Value = 1,    Symbol = "I" }
-		};
-		string conv = "";
 		
-
-		foreach (var pair in romanNumerals)
-		{
-			while (input >= pair.Value)
+			var convers = new StringBuilder();
+			var romanNumerals = new[]
 			{
-				convers.Append(pair.Symbol);
-				input -= pair.Value;
+					new { Value = 1000, Symbol = "M" },
+					new { Value = 900,  Symbol = "CM" },
+					new { Value = 500,  Symbol = "D" },
+					new { Value = 400,  Symbol = "CD" },
+					new { Value = 100,  Symbol = "C" },
+					new { Value = 90,   Symbol = "XC" },
+					new { Value = 50,   Symbol = "L" },
+					new { Value = 40,   Symbol = "XL" },
+					new { Value = 10,   Symbol = "X" },
+					new { Value = 9,    Symbol = "IX" },
+					new { Value = 5,    Symbol = "V" },
+					new { Value = 1,    Symbol = "I" }
+			};
+			string conv = "";
+
+
+			foreach (var pair in romanNumerals)
+			{
+				while (input >= pair.Value)
+				{
+					convers.Append(pair.Symbol);
+					input -= pair.Value;
+				}
 			}
-		}
-		return convers.ToString();
+			return convers.ToString();
 	}
+
+
 }
    
 
