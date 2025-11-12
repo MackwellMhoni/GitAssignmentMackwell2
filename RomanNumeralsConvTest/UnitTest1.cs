@@ -7,7 +7,21 @@ namespace RomanNumeralsConvTest
 {
 	public class UnitTest1
 	{
-		
+		private static void subtractivePair(int input)
+		{
+			var convert = new RomanNums();
+			int rem = 0;
+			var sub = new StringBuilder();
+
+
+			if (input < 10)
+			{
+				rem = 10 - input;
+				sub.Append(convert.Convert(rem));
+				sub.Append(convert.Convert(10));
+			}
+			Assert.Equal("IX", sub.ToString());
+		}
 
 		[Fact]
 		public void Test_convert_1()
@@ -71,20 +85,11 @@ namespace RomanNumeralsConvTest
 		[Fact]
 		public void test_9()
 		{
-			var convert = new RomanNums();
 			int input = 9;
-			int rem = 0;
-			var sub = new StringBuilder();
-			
-
-			if (input < 10)
-			{
-				rem = 10 - input;
-				sub.Append(convert.Convert(rem));
-				sub.Append(convert.Convert(10));
-			}
-			Assert.Equal("IX", sub.ToString());
+			subtractivePair(input);
 		}
+
+	
 
 		[Fact]
 		public void test_Dealing_with_Repition()
@@ -94,6 +99,16 @@ namespace RomanNumeralsConvTest
 
 			Assert.Equal("Error: More than 3 repetitions", convert.Repition(input));
 		}
+
+		[Fact]
+		public void test_Exposing_Incorrect()
+		{
+			var convert = new RomanNums();
+			int input = 90;
+
+			Assert.Equal("XVVVV", convert.Repition(input));
+		}
+
 
 	}
 }
