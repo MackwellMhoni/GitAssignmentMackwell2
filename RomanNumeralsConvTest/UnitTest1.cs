@@ -1,4 +1,6 @@
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.Text;
 
 namespace RomanNumeralsConvTest
 {
@@ -61,6 +63,17 @@ namespace RomanNumeralsConvTest
 			}
 			Assert.Equal("IV", subtractive);
 			
+		}
+
+		[Fact]
+		public void test_9()
+		{
+			var convert = new RomanNums();
+			int input = 9;
+
+			Assert.Equal("IX", convert.Convert(input));
+
+
 		}
 
 	}
