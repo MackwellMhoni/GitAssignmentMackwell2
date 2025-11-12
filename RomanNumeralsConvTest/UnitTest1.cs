@@ -12,7 +12,7 @@ namespace RomanNumeralsConvTest
 			var convert = new RomanNums();
 			int rem = 0;
 			var sub = new StringBuilder();
-			
+
 
 			if (input < 10)
 			{
@@ -20,15 +20,15 @@ namespace RomanNumeralsConvTest
 				sub.Append(convert.Convert(rem));
 				sub.Append(convert.Convert(10));
 				return sub.ToString();
-				
+
 			}
-			else if(input < 100)
+			else if (input < 100)
 			{
 				rem = 100 - input;
 				sub.Append(convert.Convert(rem));
 				sub.Append(convert.Convert(100));
 				return sub.ToString();
-				
+
 			}
 			else if (input < 500)
 			{
@@ -45,7 +45,8 @@ namespace RomanNumeralsConvTest
 				return sub.ToString();
 
 			}
-			else{
+			else
+			{
 				return "Try Again";
 			}
 
@@ -100,14 +101,14 @@ namespace RomanNumeralsConvTest
 		{
 			var convert = new RomanNums();
 			int input = 4;
-			
+
 			string subtractive = convert.Convert(input);
-			if(subtractive == "IIII")
+			if (subtractive == "IIII")
 			{
 				subtractive = "IV";
 			}
 			Assert.Equal("IV", subtractive);
-			
+
 		}
 
 		[Fact]
@@ -116,10 +117,10 @@ namespace RomanNumeralsConvTest
 			int input = 9;
 			string subCon = subtractivePair(input);
 
-			Assert.Equal("IX",subCon);
+			Assert.Equal("IX", subCon);
 		}
 
-	
+
 
 		[Fact]
 		public void test_Dealing_with_Repition()
@@ -136,10 +137,10 @@ namespace RomanNumeralsConvTest
 			var convert = new RomanNums();
 			int input = 90;
 
-			if(convert.Repition(input) == "Error: More than 3 repetitions")
+			if (convert.Repition(input) == "Error: More than 3 repetitions")
 			{
 				string conv = convert.Convert(input);
-				
+
 
 				Assert.Equal("LXXXX", conv);
 			}
@@ -152,7 +153,7 @@ namespace RomanNumeralsConvTest
 			int input = 90;
 
 			string subCon = subtractivePair(input);
-			Assert.Equal("XC",subCon);
+			Assert.Equal("XC", subCon);
 
 		}
 
@@ -248,7 +249,7 @@ namespace RomanNumeralsConvTest
 			var convert = new RomanNums();
 			Random rnd = new Random();
 			string subCon = "";
-			int input = rnd.Next(1,30001);
+			int input = rnd.Next(1, 30001);
 
 			if (input == 3000)
 			{
@@ -259,9 +260,27 @@ namespace RomanNumeralsConvTest
 				str.Append(subCon);
 				subCon = str.ToString();
 			}
+			else if (input > 2000 || input < 3000)
+			{
+
+				subCon = subtractivePair(input - 2000);
+				var str = new StringBuilder();
+				str.Append(convert.Convert(2000));
+				str.Append(subCon);
+				subCon = str.ToString();
+			}
+			else if (input == 3000)
+			{
+
+				subCon = convert.Convert(input);
+				subCon.ToString();
+
+			}
+			else
+			{
 
 				Assert.Equal("Try Again", subCon);
 			}
 		}
-
+	}
 }
