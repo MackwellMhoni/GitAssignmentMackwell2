@@ -155,7 +155,15 @@ namespace RomanNumeralsConvTest
 		}
 
 
+		[Fact]
+		public void Test_Roman_Numeral_RND_number_900()
+		{
+			var convert = new RomanNums();
+			int input = 900;
 
+			subtractivePair(input);
+
+		}
 
 
 	}
