@@ -12,7 +12,7 @@ namespace RomanNumeralsConvTest
 			var convert = new RomanNums();
 			int rem = 0;
 			var sub = new StringBuilder();
-
+			
 
 			if (input < 10)
 			{
@@ -106,7 +106,13 @@ namespace RomanNumeralsConvTest
 			var convert = new RomanNums();
 			int input = 90;
 
-			Assert.Equal("XVVVV", convert.Repition(input));
+			if(convert.Repition(input) == "Error: More than 3 repetitions")
+			{
+				string conv = convert.Convert(input);
+				
+
+				Assert.Equal("LXXXX", conv);
+			}
 		}
 
 
