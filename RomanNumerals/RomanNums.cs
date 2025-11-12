@@ -54,7 +54,10 @@ public class RomanNums
 			return convers.ToString();
 	}
 
-
+	public void Subtractive(int input)
+	{
+		throw new NotImplementedException();
+	}
 }
    
 

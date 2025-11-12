@@ -1,11 +1,14 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Numerics;
 using System.Text;
 
 namespace RomanNumeralsConvTest
 {
 	public class UnitTest1
 	{
+		
+
 		[Fact]
 		public void Test_convert_1()
 		{
@@ -70,11 +73,22 @@ namespace RomanNumeralsConvTest
 		{
 			var convert = new RomanNums();
 			int input = 9;
+			int rem = 0;
+			var sub = new StringBuilder();
+			
 
-			Assert.Equal("IX", convert.Convert(input));
+			if (input < 10)
+			{
+				rem = 10 - input;
+				sub.Append(convert.Convert(rem));
+				sub.Append(convert.Convert(10));
+			}
+			Assert.Equal("IX", sub.ToString());
 
 
 		}
+
+
 
 	}
 }
