@@ -84,11 +84,16 @@ namespace RomanNumeralsConvTest
 				sub.Append(convert.Convert(10));
 			}
 			Assert.Equal("IX", sub.ToString());
-
-
 		}
 
+		[Fact]
+		public void test_Dealing_with_Repition()
+		{
+			var convert = new RomanNums();
+			int input = 19;
 
+			Assert.Equal("Error: More than 3 repetitions", convert.Repition(input));
+		}
 
 	}
 }

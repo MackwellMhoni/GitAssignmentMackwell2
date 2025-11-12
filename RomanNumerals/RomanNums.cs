@@ -54,10 +54,11 @@ public class RomanNums
 			return convers.ToString();
 	}
 
-	public void Subtractive(int input)
+	public string Repition(int input)
 	{
-		throw new NotImplementedException();
+		return Convert(input);
 	}
+
 }
    
 
