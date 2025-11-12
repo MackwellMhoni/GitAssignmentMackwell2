@@ -210,9 +210,9 @@ namespace RomanNumeralsConvTest
 			if (input > 2000 || input < 3000)
 			{
 
-				string subCon = subtractivePair(input - 1000);
+				string subCon = subtractivePair(input - 2000);
 				var str = new StringBuilder();
-				str.Append("M");
+				str.Append(convert.Convert(2000));
 				str.Append(subCon);
 				subCon = str.ToString();
 
@@ -223,7 +223,7 @@ namespace RomanNumeralsConvTest
 			}
 		}
 
-
+	
 
 
 
