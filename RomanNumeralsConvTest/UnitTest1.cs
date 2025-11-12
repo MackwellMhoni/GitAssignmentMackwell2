@@ -28,7 +28,11 @@ namespace RomanNumeralsConvTest
 				sub.Append(convert.Convert(100));
 				Assert.Equal("XC", sub.ToString());
 			}
-			
+			else
+			{
+				Assert.Equal("Try Again", "Try again");
+			}
+
 		}
 
 		[Fact]
@@ -132,6 +136,17 @@ namespace RomanNumeralsConvTest
 			subtractivePair(input);
 			
 		}
+
+		[Fact]
+		public void Test_Roman_Numeral_RND_number_400()
+		{
+			var convert = new RomanNums();
+			int input = 400;
+
+			subtractivePair(input);
+
+		}
+
 
 
 
