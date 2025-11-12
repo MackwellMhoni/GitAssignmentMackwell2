@@ -223,7 +223,30 @@ namespace RomanNumeralsConvTest
 			}
 		}
 
-	
+		[Fact]
+		public void Test_Roman_Numeral_RND_3000()
+		{
+			var convert = new RomanNums();
+			int input = 3000;
+
+			if (input == 3000)
+			{
+
+				string subCon = subtractivePair(input - 3000);
+				var str = new StringBuilder();
+				str.Append("MMM");
+				str.Append(subCon);
+				subCon = str.ToString();
+
+
+
+				Assert.Equal("MMCD", subCon);
+
+			}
+		}
+
+
+
 
 
 
