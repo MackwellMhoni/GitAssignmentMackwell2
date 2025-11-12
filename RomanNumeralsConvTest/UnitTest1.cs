@@ -232,15 +232,12 @@ namespace RomanNumeralsConvTest
 			if (input == 3000)
 			{
 
-				string subCon = subtractivePair(input - 3000);
-				var str = new StringBuilder();
-				str.Append("MMM");
-				str.Append(subCon);
-				subCon = str.ToString();
+				string subCon = convert.Convert(input);
+				subCon.ToString();
 
 
 
-				Assert.Equal("MMCD", subCon);
+				Assert.Equal("MMM", subCon);
 
 			}
 		}
