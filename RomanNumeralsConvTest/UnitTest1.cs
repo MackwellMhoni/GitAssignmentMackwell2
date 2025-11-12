@@ -242,10 +242,26 @@ namespace RomanNumeralsConvTest
 			}
 		}
 
+		[Fact]
+		public void Test_Roman_Numeral_RND()
+		{
+			var convert = new RomanNums();
+			Random rnd = new Random();
+			string subCon = "";
+			int input = rnd.Next(1,30001);
 
+			if (input == 3000)
+			{
 
+				subCon = subtractivePair(input - 1000);
+				var str = new StringBuilder();
+				str.Append("M");
+				str.Append(subCon);
+				subCon = str.ToString();
+			}
 
+				Assert.Equal("Try Again", subCon);
+			}
+		}
 
-
-	}
 }
