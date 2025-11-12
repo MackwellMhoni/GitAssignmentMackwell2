@@ -201,6 +201,28 @@ namespace RomanNumeralsConvTest
 			}
 		}
 
+		[Fact]
+		public void Test_Roman_Numeral_RND_2400()
+		{
+			var convert = new RomanNums();
+			int input = 2400;
+
+			if (input > 2000 || input < 3000)
+			{
+
+				string subCon = subtractivePair(input - 1000);
+				var str = new StringBuilder();
+				str.Append("M");
+				str.Append(subCon);
+				subCon = str.ToString();
+
+
+
+				Assert.Equal("MMCD", subCon);
+
+			}
+		}
+
 
 
 
