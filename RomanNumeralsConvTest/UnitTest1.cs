@@ -115,6 +115,17 @@ namespace RomanNumeralsConvTest
 			}
 		}
 
+		[Fact]
+		public void Test_Roman_Numeral_RND_number()
+		{
+			var convert = new RomanNums();
+			int input = 1984;
+
+			Assert.Equal("MCMLXXXIV", convert.Convert(input));
+		}
+
+
+
 
 	}
 }
