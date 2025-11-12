@@ -41,7 +41,8 @@ namespace RomanNumeralsConvTest
 				sub.Append(convert.Convert(rem));
 				sub.Append(convert.Convert(1000));
 				Assert.Equal("CM", sub.ToString());
-			}else{
+			}
+			else{
 				Assert.Equal("Try Again", "Try again");
 			}
 
