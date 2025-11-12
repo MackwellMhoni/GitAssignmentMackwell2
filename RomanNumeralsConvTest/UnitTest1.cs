@@ -171,6 +171,19 @@ namespace RomanNumeralsConvTest
 
 		}
 
+		[Fact]
+		public void Test_Roman_Numeral_RND_number_1900()
+		{
+			var convert = new RomanNums();
+			int input = 1900;
+
+			subtractivePair(input);
+
+
+		}
+
+
+
 
 	}
 }
