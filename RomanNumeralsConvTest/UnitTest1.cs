@@ -28,6 +28,13 @@ namespace RomanNumeralsConvTest
 				sub.Append(convert.Convert(100));
 				Assert.Equal("XC", sub.ToString());
 			}
+			else if (input < 500)
+			{
+				rem = 500 - input;
+				sub.Append(convert.Convert(rem));
+				sub.Append(convert.Convert(500));
+				Assert.Equal("CD", sub.ToString());
+			}
 			else
 			{
 				Assert.Equal("Try Again", "Try again");
