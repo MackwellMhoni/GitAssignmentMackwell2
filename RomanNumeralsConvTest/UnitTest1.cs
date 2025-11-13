@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Numerics;
 using System.Text;
 
+
 namespace RomanNumeralsConvTest
 {
 	public class UnitTest1
@@ -123,28 +124,25 @@ namespace RomanNumeralsConvTest
 
 
 		[Fact]
-		public void test_Dealing_with_Repition()
+		public void test_Dealing_with_Repetition()
 		{
 			var convert = new RomanNums();
-			int input = 19;
 
-			Assert.Equal("Error: More than 3 repetitions", convert.Repition(input));
+			string roman = "XXXX"; 
+
+			Assert.Equal("Error: More than 3 repetitions", convert.CheckRepetition(roman));
 		}
 
 		[Fact]
 		public void test_Exposing_Incorrect()
 		{
 			var convert = new RomanNums();
-			int input = 90;
 
-			if (convert.Repition(input) == "Error: More than 3 repetitions")
-			{
-				string conv = convert.Convert(input);
+			string roman = convert.Convert(90);
 
-
-				Assert.Equal("LXXXX", conv);
-			}
+			Assert.Equal("Valid", convert.CheckRepetition(roman));
 		}
+
 
 		[Fact]
 		public void Test_Roman_Numeral_RND_number()
