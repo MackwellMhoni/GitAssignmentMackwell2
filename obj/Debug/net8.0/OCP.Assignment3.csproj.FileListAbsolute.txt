@@ -1,0 +1,14 @@
+C:\Users\mackwell.mhoni\source\repos\OCP.Assignment3\bin\Debug\net8.0\OCP.Assignment3.exe
+C:\Users\mackwell.mhoni\source\repos\OCP.Assignment3\bin\Debug\net8.0\OCP.Assignment3.deps.json
+C:\Users\mackwell.mhoni\source\repos\OCP.Assignment3\bin\Debug\net8.0\OCP.Assignment3.runtimeconfig.json
+C:\Users\mackwell.mhoni\source\repos\OCP.Assignment3\bin\Debug\net8.0\OCP.Assignment3.dll
+C:\Users\mackwell.mhoni\source\repos\OCP.Assignment3\bin\Debug\net8.0\OCP.Assignment3.pdb
+C:\Users\mackwell.mhoni\source\repos\OCP.Assignment3\obj\Debug\net8.0\OCP.Assignment3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mackwell.mhoni\source\repos\OCP.Assignment3\obj\Debug\net8.0\OCP.Assignment3.AssemblyInfoInputs.cache
+C:\Users\mackwell.mhoni\source\repos\OCP.Assignment3\obj\Debug\net8.0\OCP.Assignment3.AssemblyInfo.cs
+C:\Users\mackwell.mhoni\source\repos\OCP.Assignment3\obj\Debug\net8.0\OCP.Assignment3.csproj.CoreCompileInputs.cache
+C:\Users\mackwell.mhoni\source\repos\OCP.Assignment3\obj\Debug\net8.0\OCP.Assignment3.dll
+C:\Users\mackwell.mhoni\source\repos\OCP.Assignment3\obj\Debug\net8.0\refint\OCP.Assignment3.dll
+C:\Users\mackwell.mhoni\source\repos\OCP.Assignment3\obj\Debug\net8.0\OCP.Assignment3.pdb
+C:\Users\mackwell.mhoni\source\repos\OCP.Assignment3\obj\Debug\net8.0\OCP.Assignment3.genruntimeconfig.cache
+C:\Users\mackwell.mhoni\source\repos\OCP.Assignment3\obj\Debug\net8.0\ref\OCP.Assignment3.dll
