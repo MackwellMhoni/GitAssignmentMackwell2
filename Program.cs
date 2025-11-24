@@ -4,21 +4,21 @@ using System.Collections.Generic;
 
 namespace OCP.Assignment3
 {
-	public interface INewMember
+	public abstract class INewMember
 	{
-		double CalculateDiscount(Customer customer);
-		double CalculateMembership(Customer customer, int months);
+		public abstract double CalculateDiscount(Customer customer);
+		public abstract double CalculateMembership(Customer customer, int months);
 
 	}
 
 	public class RegularMember : INewMember
 	{
-		public double CalculateDiscount(Customer customer)
+		public override double CalculateDiscount(Customer customer)
 		{
 			return 0.05;
 		}
 
-		public double CalculateMembership(Customer customer, int months)
+		public override double CalculateMembership(Customer customer, int months)
 		{
 			return 400 * months;
 		}
@@ -26,12 +26,12 @@ namespace OCP.Assignment3
 
 	public class Premium : INewMember
 	{
-		public double CalculateDiscount(Customer customer)
+		public override double CalculateDiscount(Customer customer)
 		{
-			return 0.05;
+			return 0.10;
 		}
 
-		public double CalculateMembership(Customer customer, int months)
+		public override double CalculateMembership(Customer customer, int months)
 		{
 			return months < 12 ? 600 * months : (500 * months) + 200;
 		}
@@ -39,30 +39,47 @@ namespace OCP.Assignment3
 
 	public class VIP: INewMember
 	{
-		public double CalculateDiscount(Customer customer)
+		public override double CalculateDiscount(Customer customer)
 		{
 			return 0.20;
 		}
 
-		public double CalculateMembership(Customer customer, int months)
+		public override double CalculateMembership(Customer customer, int months)
 		{
 			return months < 18 ? 900 * months : (550 * months) + 300;
 		}
 			
 	}
 
+	public class Basic: INewMember
+	{
+
+		public override double CalculateDiscount(Customer customer)
+		{
+			return 0.03;
+
+		}
+
+		public override double CalculateMembership(Customer customer, int months)
+		{
+			return 200 / months;
+		}
+
+	}
 
 
-	public class Program
+
+	public static class Program
 	{
 		public static void Main()
 		{
-				var customers = new List<Customer>
-			{
-				new Customer("Alice", new RegularMember()),
-				new Customer("Bob", new Premium()),
-				new Customer("Cathy", new VIP())
-			};
+			var customers = new List<Customer>
+		{
+			new Customer("Alice", new RegularMember()),
+			new Customer("Bob", new Premium()),
+			new Customer("Cathy", new VIP()),
+			new Customer("Mack", new  Basic()),
+		};
 
 			var discountCalculator = new DiscountCalculator();
 

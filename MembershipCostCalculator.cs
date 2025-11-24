@@ -10,7 +10,7 @@ namespace OCP.Assignment3
 	{
 		public double CalculateMembership(Customer customer, int months)
 		{
-			return 0.00;
+			return customer.Mem.CalculateMembership(customer, months);
 		}
 	}
 }

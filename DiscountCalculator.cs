@@ -10,7 +10,7 @@ namespace OCP.Assignment3
 	{
 		public double CalculateDiscount(Customer customer)
 		{
-			return 0.00;
+			return customer.Mem.CalculateDiscount(customer);
 		}
 	}
 }
