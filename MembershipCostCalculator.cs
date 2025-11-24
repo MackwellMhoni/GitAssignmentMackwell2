@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace OCP.Assignment3
 {
-	public class DiscountCalculator
+	public class MembershipCostCalculator
 	{
-		public double CalculateDiscount(Customer customer)
+		public double CalculateMembership(Customer customer, int months)
 		{
 			return 0.00;
 		}
